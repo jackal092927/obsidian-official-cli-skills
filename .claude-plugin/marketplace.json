@@ -1,11 +1,14 @@
 {
   "name": "obsidian-official-cli-skills",
   "description": "Agent skill for the Obsidian CLI (1.12+). Prevents silent failures in tasks, tags, search, properties, and file creation.",
+  "owner": {
+    "name": "jackal092927"
+  },
   "plugins": [
     {
       "name": "obsidian-cli",
       "description": "Guides agents to use Obsidian CLI safely — 13 silent failure gotchas documented.",
-      "skills": ["skills/obsidian-cli"]
+      "source": "./skills/obsidian-cli"
     }
   ]
 }
