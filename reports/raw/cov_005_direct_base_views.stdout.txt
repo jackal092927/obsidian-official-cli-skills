@@ -1,0 +1,2 @@
+2026-02-13 06:22:14 Loading updated app package /Users/Jackal/Library/Application Support/obsidian/obsidian-1.12.1.asar
+Error: Active file is not a base file: projects/Obsidian-AI-model/obsidian_cli_wrapper/design-v2.md

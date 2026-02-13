@@ -1,0 +1,6 @@
+2026-02-13 06:24:33 Loading updated app package /Users/Jackal/Library/Application Support/obsidian/obsidian-1.12.1.asar
+__obs_cli_skill_benchmark__/cmp_prop_remove_direct.md
+__obs_cli_skill_benchmark__/cmp_prop_remove_skill.md
+__obs_cli_skill_benchmark__/cmp_prop_read.md
+__obs_cli_skill_benchmark__/cmp_prop_set_direct.md
+__obs_cli_skill_benchmark__/cmp_prop_set_skill.md
