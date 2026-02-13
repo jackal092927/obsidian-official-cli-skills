@@ -1,0 +1,5 @@
+{
+  "name": "obsidian-cli",
+  "description": "Guides agents to use Obsidian CLI safely — 13 silent failure gotchas documented.",
+  "version": "1.0.0"
+}
