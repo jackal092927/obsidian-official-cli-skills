@@ -4,6 +4,28 @@ Agent skill for the [Obsidian CLI](https://obsidian.md) (1.12+). Guides coding a
 
 [![license MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+## Why do you need this!
+
+> [!WARNING]
+> **Without this skill, your agent will silently get wrong answers from Obsidian CLI.**
+> Commands succeed with exit code 0 — but return empty or incorrect data.
+
+From 57 scenario tests against Obsidian CLI 1.12:
+
+- **13 silent failures (22.8%)** — command "succeeds" but returns wrong/empty data
+- **24 material issues (42.1%)** — skill-guided usage is meaningfully safer
+
+| Trap | What happens without the skill | With skill |
+|------|-------------------------------|------------|
+| Task scope | `tasks todo` → **0 results** (scoped to "active file" = nothing) | `tasks all todo` |
+| Tag scope | `tags counts` → **empty** | `tags all counts` |
+| Property format | `properties format=json` → **returns YAML** | `properties format=tsv` |
+| Search format | `search query="x"` → **plain text, no structure** | `search query="x" format=json matches` |
+| Create silent | `create name="x" content="y"` → **opens Obsidian UI** | add `silent` flag |
+| Exit codes | error message but **`$?` = 0** | parse output for `Error:` |
+
+Every one of these looks like it worked. None of them did. Full evidence: [`HIGH_RISK_REPORT.md`](HIGH_RISK_REPORT.md)
+
 ## Install
 
 ### Recommended: Claude Code plugin marketplace (auto-updates)
@@ -63,24 +85,6 @@ curl -o .codex/skills/obsidian-cli/SKILL.md \
 1. [Obsidian](https://obsidian.md) **1.12+** installed
 2. Enable CLI: **Settings > General > Command line interface** > follow the registration prompt
 3. Restart terminal (`obsidian` should be in PATH)
-
-## Why this exists
-
-Obsidian CLI is powerful, but several defaults silently produce wrong results for agents. From 57 scenario tests:
-
-- **13** silent failures (22.8%) — command succeeds but returns wrong/empty data
-- **24** material issues (42.1%) — skill-guided usage is safer or gives better output
-
-| Trap | What goes wrong | Fix |
-|------|----------------|-----|
-| Task scope | `tasks todo` → 0 results (scoped to "active file" = nothing) | `tasks all todo` |
-| Tag scope | `tags counts` → empty | `tags all counts` |
-| Property format | `properties format=json` → returns YAML | `properties format=tsv` |
-| Search format | `search query="x"` → plain text | `search query="x" format=json matches` |
-| Create silent | `create name="x" content="y"` → opens Obsidian UI | add `silent` flag |
-| Exit codes | error message but `$?` = 0 | parse output for `Error:` |
-
-Full evidence: [`HIGH_RISK_REPORT.md`](HIGH_RISK_REPORT.md)
 
 ## What's included
 
