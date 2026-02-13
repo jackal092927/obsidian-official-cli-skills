@@ -31,14 +31,14 @@ See evidence: [`HIGH_RISK_REPORT.md`](HIGH_RISK_REPORT.md).
 ```bash
 mkdir -p .claude/skills/obsidian-cli
 curl -o .claude/skills/obsidian-cli/SKILL.md \
-  https://raw.githubusercontent.com/<owner>/<repo>/main/SKILL.md
+  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/SKILL.md
 ```
 
 ### Codex
 ```bash
 mkdir -p .codex/skills/obsidian-cli
 curl -o .codex/skills/obsidian-cli/SKILL.md \
-  https://raw.githubusercontent.com/<owner>/<repo>/main/SKILL.md
+  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/SKILL.md
 ```
 
 ## Scope
