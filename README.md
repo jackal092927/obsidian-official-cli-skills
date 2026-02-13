@@ -10,7 +10,7 @@ Agent skill for the [Obsidian CLI](https://obsidian.md) (1.12+). Guides coding a
 > **Without this skill, your agent will silently get wrong answers from Obsidian CLI.**
 > Commands succeed with exit code 0 — but return empty or incorrect data.
 
-From 57 scenario tests against Obsidian CLI 1.12:
+From 57 scenario tests against Obsidian CLI 1.12 (tested February 2026):
 
 - **13 silent failures (22.8%)** — command "succeeds" but returns wrong/empty data
 - **24 material issues (42.1%)** — skill-guided usage is meaningfully safer
