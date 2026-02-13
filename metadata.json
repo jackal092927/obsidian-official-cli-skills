@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "date": "February 2026",
+  "abstract": "Agent skill for the Obsidian CLI (1.12+). Prevents 13 silent failures where naive CLI usage returns wrong or empty data. Covers tasks, tags, search, properties, file creation, and error handling.",
+  "references": [
+    "https://help.obsidian.md/cli",
+    "https://obsidian.md"
+  ]
+}
