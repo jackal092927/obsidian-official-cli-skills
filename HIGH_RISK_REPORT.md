@@ -2,7 +2,7 @@
 
 Date: 2026-02-13
 CLI: 1.12.1
-Vault: test0
+Vault: (tested in Obsidian Sandbox and a personal vault)
 
 ## Purpose
 This report only documents severe, motivation-critical issues that can mislead coding agents.
@@ -24,7 +24,7 @@ Skill-guided:
 ```bash
 obsidian tasks all todo total
 ```
-Observed: `684`
+Observed: correct vault-wide task count (non-zero)
 
 Evidence:
 - `reports/raw/cmp_015_tasks_direct_direct_tasks.stdout.txt`
@@ -42,7 +42,7 @@ Skill-guided:
 ```bash
 obsidian tags all counts
 ```
-Observed: full vault tag table (`141` lines in this run)
+Observed: full vault tag table (correct count)
 
 Evidence:
 - `reports/raw/cmp_013_tags_direct_direct_tags.stdout.txt`
