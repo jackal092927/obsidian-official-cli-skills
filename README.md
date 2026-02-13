@@ -53,7 +53,7 @@ Works with 20+ AI coding agents that support the [Agent Skills](https://agentski
 ```bash
 mkdir -p .claude/skills/obsidian-cli
 curl -o .claude/skills/obsidian-cli/SKILL.md \
-  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/skills/obsidian-cli/SKILL.md
+  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/plugins/obsidian-cli/skills/obsidian-cli/SKILL.md
 ```
 
 </details>
@@ -65,7 +65,7 @@ curl -o .claude/skills/obsidian-cli/SKILL.md \
 # Codex
 mkdir -p .codex/skills/obsidian-cli
 curl -o .codex/skills/obsidian-cli/SKILL.md \
-  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/skills/obsidian-cli/SKILL.md
+  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/plugins/obsidian-cli/skills/obsidian-cli/SKILL.md
 
 # Or copy SKILL.md into your agent's context/system prompt
 ```
@@ -90,7 +90,7 @@ curl -o .codex/skills/obsidian-cli/SKILL.md \
 
 | File | Covers |
 |------|--------|
-| `skills/obsidian-cli/SKILL.md` | 34 commands with correct syntax, gotcha warnings, safety rules, error handling |
+| `plugins/obsidian-cli/skills/obsidian-cli/SKILL.md` | 34 commands with correct syntax, gotcha warnings, safety rules, error handling |
 | `HIGH_RISK_REPORT.md` | 5 severe issues with reproduction commands and raw CLI evidence |
 | `reports/` | Raw stdout captures and command matrix from benchmark runs |
 
@@ -100,7 +100,7 @@ If you find a new gotcha or a command that changed behavior:
 
 1. Reproduce the issue and capture CLI output
 2. Open an issue with: naive command, expected output, actual output
-3. PRs welcome — edit `skills/obsidian-cli/SKILL.md` directly
+3. PRs welcome — edit `plugins/obsidian-cli/skills/obsidian-cli/SKILL.md` directly
 
 ## License
 
