@@ -1,0 +1,20 @@
+{
+  "name": "obsidian-cli",
+  "version": "1.0.0",
+  "description": "Agent skill for the Obsidian CLI (1.12+). Prevents 13 silent failures where naive CLI usage returns wrong or empty data. Covers tasks, tags, search, properties, file creation, and error handling.",
+  "author": {
+    "name": "jackal092927"
+  },
+  "repository": "https://github.com/jackal092927/obsidian-official-cli-skills",
+  "license": "MIT",
+  "keywords": [
+    "obsidian",
+    "cli",
+    "vault",
+    "tasks",
+    "tags",
+    "search",
+    "properties",
+    "agent-skills"
+  ]
+}
