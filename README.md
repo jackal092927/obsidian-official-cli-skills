@@ -6,11 +6,24 @@ Agent skill for the [Obsidian CLI](https://obsidian.md) (1.12+). Guides coding a
 
 ## Install
 
+### Recommended: Claude Code plugin marketplace (auto-updates)
+
+```
+/plugin marketplace add jackal092927/obsidian-official-cli-skills
+/plugin install obsidian-cli@obsidian-official-cli-skills
+```
+
+Auto-updates on startup — no manual action needed after initial install.
+
+### Cross-agent: npx (Claude Code, Codex, Cursor, etc.)
+
 ```bash
 npx skills add jackal092927/obsidian-official-cli-skills
 ```
 
-Or manually:
+Works with 20+ AI coding agents that support the [Agent Skills](https://agentskills.io) standard.
+
+### Manual
 
 <details>
 <summary>Claude Code</summary>
@@ -18,7 +31,7 @@ Or manually:
 ```bash
 mkdir -p .claude/skills/obsidian-cli
 curl -o .claude/skills/obsidian-cli/SKILL.md \
-  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/SKILL.md
+  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/skills/obsidian-cli/SKILL.md
 ```
 
 </details>
@@ -30,12 +43,20 @@ curl -o .claude/skills/obsidian-cli/SKILL.md \
 # Codex
 mkdir -p .codex/skills/obsidian-cli
 curl -o .codex/skills/obsidian-cli/SKILL.md \
-  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/SKILL.md
+  https://raw.githubusercontent.com/jackal092927/obsidian-official-cli-skills/main/skills/obsidian-cli/SKILL.md
 
 # Or copy SKILL.md into your agent's context/system prompt
 ```
 
 </details>
+
+## Updating
+
+| Method | How to update |
+|--------|--------------|
+| Plugin marketplace | Automatic at startup — no action needed |
+| npx | `npx skills update` |
+| Manual | Re-run the curl command above (overwrites existing SKILL.md) |
 
 ## Prerequisites
 
@@ -65,19 +86,9 @@ Full evidence: [`HIGH_RISK_REPORT.md`](HIGH_RISK_REPORT.md)
 
 | File | Covers |
 |------|--------|
-| `SKILL.md` | 34 commands with correct syntax, gotcha warnings, safety rules, error handling |
+| `skills/obsidian-cli/SKILL.md` | 34 commands with correct syntax, gotcha warnings, safety rules, error handling |
 | `HIGH_RISK_REPORT.md` | 5 severe issues with reproduction commands and raw CLI evidence |
 | `reports/` | Raw stdout captures and command matrix from benchmark runs |
-
-## Updating
-
-To update the skill after a new release:
-
-```bash
-npx skills add jackal092927/obsidian-official-cli-skills
-```
-
-Or re-run the manual curl command — it overwrites the existing `SKILL.md`.
 
 ## Contributing
 
@@ -85,7 +96,7 @@ If you find a new gotcha or a command that changed behavior:
 
 1. Reproduce the issue and capture CLI output
 2. Open an issue with: naive command, expected output, actual output
-3. PRs welcome — edit `SKILL.md` directly
+3. PRs welcome — edit `skills/obsidian-cli/SKILL.md` directly
 
 ## License
 
